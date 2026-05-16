@@ -1,6 +1,6 @@
 name: live_activities_kit
 description: Live Activities and Dynamic Island for Flutter. iOS 16.1+ Live Activities with Dynamic Island animations. Android heads-up notifications.
-version: 0.0.1
+version: 0.1.0
 homepage: https://github.com/PurpleSoftSrl/live_activities
 issue_tracker: https://github.com/PurpleSoftSrl/live_activities/issues
 topics:

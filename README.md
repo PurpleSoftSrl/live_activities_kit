@@ -23,7 +23,7 @@
 ## Quick Start
 
 ```dart
-import 'package:live_activities/live_activities.dart';
+import 'package:live_activities_kit/live_activities.dart';
 
 // Check support
 if (!await LiveActivity.isSupported) return;
@@ -55,7 +55,7 @@ LiveActivity.timer(id: 'eta', title: 'Delivery', duration: Duration(minutes: 15)
 
 ```yaml
 dependencies:
-  live_activities: ^0.1.0
+  live_activities_kit: ^0.1.0
 ```
 
 ### iOS Setup
