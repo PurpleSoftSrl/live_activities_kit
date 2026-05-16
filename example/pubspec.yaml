@@ -17,7 +17,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  live_activities:
+  live_activities_kit:
     # When depending on this package from a real application you should use:
     #   live_activities: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints

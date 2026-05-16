@@ -36,12 +36,11 @@ class LiveActivity {
   static Future<bool> update({required String id, required LiveActivityData data, LiveActivityAlert? alert}) =>
       _platform.update(id, data, alert);
 
-  static Future<bool> end(String id, {LiveActivityData? finalContent, LiveActivityDismissalPolicy policy = LiveActivityDismissalPolicy.immediate, Duration? duration}) async {
-    if (policy == LiveActivityDismissalPolicy.afterDuration) {
-      return _platform.end(id, finalContent: finalContent, policy: LiveActivityDismissalPolicy.afterDuration);
-    }
-    return _platform.end(id, finalContent: finalContent, policy: policy);
-  }
+  static Future<bool> end(String id, {LiveActivityData? finalContent, LiveActivityDismissalPolicy policy = LiveActivityDismissalPolicy.immediate, Duration? duration}) async =>
+      _platform.end(id, finalContent: finalContent, policy: policy);
+
+  static Future<List<String>> get allIds => _platform.getAllIds();
+  static Future<bool> endAll() => _platform.endAll();
 
   static Future<String?> getPushToken() => _platform.getPushToken();
   static Stream<String> get onPushToken => _platform.onPushToken;

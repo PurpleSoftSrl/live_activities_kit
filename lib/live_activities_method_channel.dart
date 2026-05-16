@@ -35,6 +35,17 @@ class MethodChannelLiveActivities extends LiveActivitiesPlatform {
     return await methodChannel.invokeMethod<bool>('end', args) ?? false;
   }
 
+  @override
+  Future<List<String>> getAllIds() async {
+    final result = await methodChannel.invokeListMethod<String>('getAllIds');
+    return result?.cast<String>() ?? [];
+  }
+
+  @override
+  Future<bool> endAll() async {
+    return await methodChannel.invokeMethod<bool>('endAll') ?? false;
+  }
+
   @override Future<String?> getPushToken() => methodChannel.invokeMethod<String>('getPushToken');
   @override Stream<String> get onPushToken => pushTokenEvents.receiveBroadcastStream().cast<String>();
   @override Stream<String> get onAction => actionEvents.receiveBroadcastStream().cast<String>();

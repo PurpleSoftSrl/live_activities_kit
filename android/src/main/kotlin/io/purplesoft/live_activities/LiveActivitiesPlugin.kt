@@ -24,6 +24,7 @@ class LiveActivitiesPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Stre
     private var applicationContext: Context? = null
     private var pushTokenSink: EventChannel.EventSink? = null
     private var actionSink: EventChannel.EventSink? = null
+    private val activeNotifications = mutableMapOf<Int, String>()
 
     private val notificationManager: NotificationManager?
         get() = applicationContext?.getSystemService(Context.NOTIFICATION_SERVICE) as? NotificationManager
@@ -60,6 +61,8 @@ class LiveActivitiesPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Stre
             "start" -> startLiveNotification(call, result)
             "update" -> startLiveNotification(call, result)
             "end" -> endLiveNotification(call, result)
+            "getAllIds" -> result.success(activeNotifications.values.toList())
+            "endAll" -> { val cancelled = activeNotifications.keys.toList(); cancelled.forEach { notificationManager?.cancel(it) }; activeNotifications.clear(); result.success(cancelled.isNotEmpty()) }
             "getPushToken" -> result.success(null)
             else -> result.notImplemented()
         }
@@ -145,6 +148,7 @@ class LiveActivitiesPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Stre
         }
 
         nm.notify(id.hashCode(), notification.build())
+        activeNotifications[id.hashCode()] = id
         result.success(true)
     }
 
@@ -158,7 +162,7 @@ class LiveActivitiesPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Stre
         val notificationId = id.hashCode()
 
         when (policy) {
-            "immediate" -> nm.cancel(notificationId)
+            "immediate" -> { nm.cancel(notificationId); activeNotifications.remove(notificationId) }
             "default_", "afterDuration" -> {
                 // Update notification to show final state with completed progress
                 val finalTitle = args["title"] as? String ?: "Completed"

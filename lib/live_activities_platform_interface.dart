@@ -20,6 +20,8 @@ abstract class LiveActivitiesPlatform extends PlatformInterface {
   Future<bool> start(String id, LiveActivityData data, [List<Map<String, String>>? actions]);
   Future<bool> update(String id, LiveActivityData data, [LiveActivityAlert? alert]);
   Future<bool> end(String id, {LiveActivityData? finalContent, LiveActivityDismissalPolicy policy = LiveActivityDismissalPolicy.immediate});
+  Future<List<String>> getAllIds();
+  Future<bool> endAll();
   Future<String?> getPushToken();
   Stream<String> get onPushToken;
   Stream<String> get onAction;

@@ -1,7 +1,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:live_activities/live_activities_method_channel.dart';
-import 'package:live_activities/live_activities_platform_interface.dart';
+import 'package:live_activities_kit/live_activities_method_channel.dart';
+import 'package:live_activities_kit/live_activities_platform_interface.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
@@ -34,3 +34,4 @@ void main() {
     });
   });
 }
+

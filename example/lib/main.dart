@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:live_activities/live_activities.dart';
-import 'package:live_activities/live_activities_platform_interface.dart';
+import 'package:live_activities_kit/live_activities.dart';
+import 'package:live_activities_kit/live_activities_platform_interface.dart';
 
 void main() => runApp(const LiveActivitiesApp());
 
@@ -82,3 +82,4 @@ class _LiveActivitiesDemoState extends State<LiveActivitiesDemo> {
 
   Widget _btn(String label, VoidCallback fn) => ElevatedButton(onPressed: fn, child: Text(label));
 }
+
