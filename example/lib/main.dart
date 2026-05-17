@@ -35,7 +35,7 @@ class _LiveActivitiesDemoState extends State<LiveActivitiesDemo> {
       id: id,
       data: const LiveActivityData(title: 'Preparing order', subtitle: 'Estimated 5 min', progress: 0.2),
     );
-    setState(() { _activeId = ok ? id : ''; _status = ok ? '✅ Started' : '❌ Failed'; });
+    setState(() { _activeId = ok != null ? id : ''; _status = ok != null ? '✅ Started' : '❌ Failed'; });
   }
 
   Future<void> _startTimer() async {
