@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
-  s.name             = 'live_activities'
-  s.version          = '0.0.1'
+  s.name             = 'live_activities_kit'
+  s.version          = '0.1.0'
   s.summary          = 'Live Activities and Dynamic Island for Flutter. iOS 16.1+, Android heads-up notifications.'
   s.description      = <<-DESC
 Live Activities and Dynamic Island plugin for Flutter. Supports iOS 16.1+ Live Activities
