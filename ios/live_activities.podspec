@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
 Live Activities and Dynamic Island plugin for Flutter. Supports iOS 16.1+ Live Activities
 with Dynamic Island, Lock Screen widgets, and Android heads-up progress notifications.
                       DESC
-  s.homepage         = 'https://github.com/PurpleSoftSrl/live_activities'
+  s.homepage         = 'https://github.com/PurpleSoftSrl/live_activities_kit'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'PurpleSoft' => 'developers@purplesoft.io' }
   s.source           = { :path => '.' }

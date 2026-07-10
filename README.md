@@ -1,10 +1,10 @@
-# live_activities
+# live_activities_kit
 
 > Live Activities & Dynamic Island for Flutter — iOS 16.1+ and Android heads-up notifications, with a specular API across both platforms.
 
-[![pub.dev](https://img.shields.io/pub/v/live_activities?label=pub.dev&logo=dart&color=0175C2)](https://pub.dev/packages/live_activities)
-[![CI](https://github.com/PurpleSoftSrl/live_activities/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/PurpleSoftSrl/live_activities/actions/workflows/ci.yml)
-[![Publish](https://github.com/PurpleSoftSrl/live_activities/actions/workflows/publish.yml/badge.svg)](https://github.com/PurpleSoftSrl/live_activities/actions/workflows/publish.yml)
+[![pub.dev](https://img.shields.io/pub/v/live_activities_kit?label=pub.dev&logo=dart&color=0175C2)](https://pub.dev/packages/live_activities_kit)
+[![CI](https://github.com/PurpleSoftSrl/live_activities_kit/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/PurpleSoftSrl/live_activities_kit/actions/workflows/ci.yml)
+[![Publish](https://github.com/PurpleSoftSrl/live_activities_kit/actions/workflows/publish.yml/badge.svg)](https://github.com/PurpleSoftSrl/live_activities_kit/actions/workflows/publish.yml)
 [![License](https://img.shields.io/badge/license-AGPL%20v3%20%7C%20Commercial-blue)](LICENSE)
 
 ## Features
