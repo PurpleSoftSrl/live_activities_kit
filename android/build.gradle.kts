@@ -1,4 +1,4 @@
-group = "io.purplesoft.live_activities"
+group = "io.purplesoft.live_activities_kit"
 version = "1.0-SNAPSHOT"
 
 buildscript {
@@ -27,7 +27,7 @@ plugins {
 }
 
 android {
-    namespace = "io.purplesoft.live_activities"
+    namespace = "io.purplesoft.live_activities_kit"
 
     compileSdk = 36
 

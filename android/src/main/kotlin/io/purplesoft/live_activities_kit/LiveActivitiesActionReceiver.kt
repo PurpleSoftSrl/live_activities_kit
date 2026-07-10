@@ -1,4 +1,4 @@
-package io.purplesoft.live_activities
+package io.purplesoft.live_activities_kit
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -14,7 +14,7 @@ class LiveActivitiesActionReceiver : BroadcastReceiver() {
         // Forward to Flutter via EventChannel stored in the plugin
         val messenger = LiveActivitiesFlutterEngineProvider.binaryMessenger
         if (messenger != null) {
-            val channel = EventChannel(messenger, "live_activities/actions")
+            val channel = EventChannel(messenger, "live_activities_kit/actions")
             // Re-broadcast via the same stream
             FlutterUtils.postEvent(actionId)
         }

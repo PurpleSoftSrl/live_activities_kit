@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'live_activities_platform_interface.dart';
+import 'live_activities_kit_platform_interface.dart';
 
 class LiveActivity {
   LiveActivity._(); static LiveActivitiesPlatform get _p => LiveActivitiesPlatform.instance;

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:live_activities_kit/live_activities_platform_interface.dart';
+import 'package:live_activities_kit/live_activities_kit_platform_interface.dart';
 
 class MockLiveActivitiesPlatform extends LiveActivitiesPlatform {
   @override Future<bool> get isSupported => Future.value(true);

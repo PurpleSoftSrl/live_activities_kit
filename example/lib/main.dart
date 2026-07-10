@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:live_activities_kit/live_activities.dart';
-import 'package:live_activities_kit/live_activities_platform_interface.dart';
+import 'package:live_activities_kit/live_activities_kit.dart';
+import 'package:live_activities_kit/live_activities_kit_platform_interface.dart';
 
 void main() => runApp(const LiveActivitiesApp());
 

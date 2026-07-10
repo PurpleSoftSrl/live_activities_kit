@@ -23,7 +23,7 @@
 ## Quick Start
 
 ```dart
-import 'package:live_activities_kit/live_activities.dart';
+import 'package:live_activities_kit/live_activities_kit.dart';
 
 // Check support
 if (!await LiveActivity.isSupported) return;

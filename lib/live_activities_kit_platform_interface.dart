@@ -1,5 +1,5 @@
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
-import 'live_activities_method_channel.dart';
+import 'live_activities_kit_method_channel.dart';
 
 abstract class LiveActivitiesPlatform extends PlatformInterface {
   LiveActivitiesPlatform() : super(token: _token);

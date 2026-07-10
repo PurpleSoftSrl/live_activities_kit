@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'live_activities_platform_interface.dart';
+import 'live_activities_kit_platform_interface.dart';
 
 class MethodChannelLiveActivities extends LiveActivitiesPlatform {
-  @visibleForTesting static const methodChannel = MethodChannel('live_activities');
-  @visibleForTesting static const pushTokenEvents = EventChannel('live_activities/pushToken');
-  @visibleForTesting static const actionEvents = EventChannel('live_activities/actions');
-  @visibleForTesting static const urlSchemeEvents = EventChannel('live_activities/urlScheme');
-  @visibleForTesting static const activityEvents = EventChannel('live_activities/activityUpdate');
+  @visibleForTesting static const methodChannel = MethodChannel('live_activities_kit');
+  @visibleForTesting static const pushTokenEvents = EventChannel('live_activities_kit/pushToken');
+  @visibleForTesting static const actionEvents = EventChannel('live_activities_kit/actions');
+  @visibleForTesting static const urlSchemeEvents = EventChannel('live_activities_kit/urlScheme');
+  @visibleForTesting static const activityEvents = EventChannel('live_activities_kit/activityUpdate');
 
   @override Future<bool> get isSupported async => await methodChannel.invokeMethod<bool>('isSupported') ?? false;
   @override Future<bool> get areActivitiesEnabled async => await methodChannel.invokeMethod<bool>('areActivitiesEnabled') ?? false;

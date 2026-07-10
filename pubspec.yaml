@@ -41,7 +41,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: io.purplesoft.live_activities
+        package: io.purplesoft.live_activities_kit
         pluginClass: LiveActivitiesPlugin
       ios:
         pluginClass: LiveActivitiesPlugin

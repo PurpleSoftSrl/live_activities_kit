@@ -1,4 +1,4 @@
-package io.purplesoft.live_activities
+package io.purplesoft.live_activities_kit
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -36,16 +36,16 @@ class LiveActivitiesPlugin : FlutterPlugin, MethodCallHandler, EventChannel.Stre
     override fun onAttachedToEngine(binding: FlutterPlugin.FlutterPluginBinding) {
         applicationContext = binding.applicationContext
         LiveActivitiesFlutterEngineProvider.binaryMessenger = binding.binaryMessenger
-        channel = MethodChannel(binding.binaryMessenger, "live_activities"); channel.setMethodCallHandler(this)
-        eventChannel = EventChannel(binding.binaryMessenger, "live_activities/pushToken"); eventChannel.setStreamHandler(this)
-        actionChannel = EventChannel(binding.binaryMessenger, "live_activities/actions")
+        channel = MethodChannel(binding.binaryMessenger, "live_activities_kit"); channel.setMethodCallHandler(this)
+        eventChannel = EventChannel(binding.binaryMessenger, "live_activities_kit/pushToken"); eventChannel.setStreamHandler(this)
+        actionChannel = EventChannel(binding.binaryMessenger, "live_activities_kit/actions")
         actionChannel.setStreamHandler(object : EventChannel.StreamHandler {
             override fun onListen(a: Any?, e: EventChannel.EventSink?) { actionSink = e; FlutterUtils.setEventSink(e) }
             override fun onCancel(a: Any?) { actionSink = null; FlutterUtils.setEventSink(null) }
         })
-        urlSchemeChannel = EventChannel(binding.binaryMessenger, "live_activities/urlScheme")
+        urlSchemeChannel = EventChannel(binding.binaryMessenger, "live_activities_kit/urlScheme")
         urlSchemeChannel.setStreamHandler(object : EventChannel.StreamHandler { override fun onListen(a: Any?, e: EventChannel.EventSink?) {} override fun onCancel(a: Any?) {} })
-        activityUpdateChannel = EventChannel(binding.binaryMessenger, "live_activities/activityUpdate")
+        activityUpdateChannel = EventChannel(binding.binaryMessenger, "live_activities_kit/activityUpdate")
         activityUpdateChannel.setStreamHandler(object : EventChannel.StreamHandler {
             override fun onListen(a: Any?, e: EventChannel.EventSink?) { activityUpdateSink = e }
             override fun onCancel(a: Any?) { activityUpdateSink = null }

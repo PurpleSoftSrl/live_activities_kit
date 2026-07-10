@@ -5,10 +5,10 @@ public class LiveActivitiesPlugin: NSObject, FlutterPlugin, FlutterStreamHandler
     private var pushTokenSink: FlutterEventSink?
 
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channel = FlutterMethodChannel(name: "live_activities", binaryMessenger: registrar.messenger())
-        let eventChannel = FlutterEventChannel(name: "live_activities/pushToken", binaryMessenger: registrar.messenger())
-        let urlSchemeChannel = FlutterEventChannel(name: "live_activities/urlScheme", binaryMessenger: registrar.messenger())
-        let activityChannel = FlutterEventChannel(name: "live_activities/activityUpdate", binaryMessenger: registrar.messenger())
+        let channel = FlutterMethodChannel(name: "live_activities_kit", binaryMessenger: registrar.messenger())
+        let eventChannel = FlutterEventChannel(name: "live_activities_kit/pushToken", binaryMessenger: registrar.messenger())
+        let urlSchemeChannel = FlutterEventChannel(name: "live_activities_kit/urlScheme", binaryMessenger: registrar.messenger())
+        let activityChannel = FlutterEventChannel(name: "live_activities_kit/activityUpdate", binaryMessenger: registrar.messenger())
         let instance = LiveActivitiesPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)
         eventChannel.setStreamHandler(instance)
