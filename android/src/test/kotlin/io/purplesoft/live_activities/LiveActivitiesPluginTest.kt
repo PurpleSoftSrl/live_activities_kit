@@ -1,4 +1,4 @@
-package com.example.live_activities
+package io.purplesoft.live_activities
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel

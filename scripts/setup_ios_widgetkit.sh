@@ -32,7 +32,7 @@ info "App: $APP_NAME"
 
 # ── 1. Podspec frameworks ─────────────────────────────────────────────────
 
-PODSPEC="ios/live_activities.podspec"
+PODSPEC="ios/live_activities_kit.podspec"
 if [[ -f "$PODSPEC" ]]; then
   step "Podspec frameworks"
   for fw in WidgetKit ActivityKit SwiftUI; do

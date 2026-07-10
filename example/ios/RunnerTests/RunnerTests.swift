@@ -3,7 +3,7 @@ import UIKit
 import XCTest
 
 
-@testable import live_activities
+@testable import live_activities_kit
 
 // This demonstrates a simple unit test of the Swift portion of this plugin's implementation.
 //

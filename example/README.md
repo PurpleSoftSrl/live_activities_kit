@@ -1,6 +1,6 @@
 # live_activities_example
 
-Demonstrates how to use the live_activities plugin.
+Demonstrates how to use the live_activities_kit plugin.
 
 ## Getting Started
 

@@ -1,1 +1,1 @@
-rootProject.name = 'live_activities'
+rootProject.name = "live_activities_kit"
